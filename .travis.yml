@@ -1,6 +1,3 @@
-{
-  "language": "swift",
-  "os": [
-    "osx"
-  ]
-}
+language:
+  - swift
+os: osx
