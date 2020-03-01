@@ -158,7 +158,7 @@ struct DetailView: View {
                         }
                         """
                         if let cacheFolder = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first {
-                            let appFolder = cacheFolder.appendingPathComponent("mako.Push-Notification-GUI")
+                            let appFolder = cacheFolder.appendingPathComponent(Bundle.main.bundleIdentifier ?? "com.HinaKormoczi.Push-Notification-GUI")
                             do {
                                 try FileManager.default.createDirectory(atPath: appFolder.path, withIntermediateDirectories: true, attributes: nil)
                                 let filename = appFolder.appendingPathComponent("push.apns")
