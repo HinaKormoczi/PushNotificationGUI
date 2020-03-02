@@ -20,7 +20,7 @@ More about the APNs [here](https://developer.apple.com/library/archive/documenta
 
 ## Meta
 
-Hina Kormoczi – hina.kormoczi@icloud.com
+Hina Kormoczi – [@HinaKormoczi](https://twitter.com/HinaKormoczi) –  hina.kormoczi@icloud.com
 
 Distributed under the GPL-3.0 license. See ``LICENSE`` for more information.
 

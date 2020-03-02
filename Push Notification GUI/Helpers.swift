@@ -21,7 +21,6 @@ class Helpers {
         let bash: CommandExecuting = Bash()
         print("xcrun simctl push \(uuid) \(bundle) \(filePath)")
         _ = bash.execute(commandName: "xcrun", arguments: ["simctl", "push", uuid, bundle, filePath])
-        //xcrun simctl push 6732348E-857C-4EB9-8D01-F90796C74845 mako.Push-Notification-Test Push.apns
     }
     
     static func getDevices() -> [String] {
