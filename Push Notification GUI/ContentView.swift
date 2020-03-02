@@ -13,12 +13,22 @@ struct ContentView: View {
     @EnvironmentObject var pushDetails: PushDetails
     
     var body: some View {
-        NavigationView {
+        return NavigationView {
             VStack{
-                Text("Available devices:").padding(.top, 10)
-                List {
-                    ForEach(devices.devices.filter { $0.isAvailable }, id: \.uuid) { device in
-                        DeviceRow(device: device).environmentObject(self.pushDetails)
+                Text("Available devices:").padding(.top, CGFloat(10))
+                if (devices.devices.filter { $0.isAvailable }).count == 0 {
+                    List{
+                        HStack(alignment: .center){
+                            Spacer()
+                            Text("You don't have any Simulator booted.").font(.subheadline).padding(.top, CGFloat(10))
+                            Spacer()
+                        }
+                    }
+                } else {
+                    List {
+                        ForEach(devices.devices.filter { $0.isAvailable }, id: \.uuid) { device in
+                            DeviceRow(device: device).environmentObject(self.pushDetails)
+                        }
                     }
                 }
                 Button("Refresh"){
